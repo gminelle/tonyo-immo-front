@@ -10,6 +10,8 @@ export default class LocaleService {
 
   static readonly LOCALE_EN: Locale = { code: 'en', name: 'English' } as const;
 
+  static readonly LOCALE_NL: Locale = { code: 'nl', name: 'Nederlands' } as const;
+
   private readonly currentLocale: WritableObservable<Locale>;
 
   constructor(private readonly localeResolver: LocaleResolver) {

@@ -14,6 +14,7 @@ export default class LocaleResolverFactory implements Provider<LocaleResolver> {
       availableLocales: [
         LocaleService.LOCALE_FR,
         LocaleService.LOCALE_EN,
+        LocaleService.LOCALE_NL,
       ],
       localeStorage: window.localStorage,
       resolvers: [LocaleResolver.tryResolveFromStorage, LocaleResolver.tryResolveFromBrowser],

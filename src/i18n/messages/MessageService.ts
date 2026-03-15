@@ -5,6 +5,7 @@ import { Translations } from '@i18n/translations/Translations';
 import LocaleService from '@i18n/locale/LocaleService';
 import frMessages from '@i18n/translations/fr';
 import enMessages from '@i18n/translations/en';
+import nlMessages from '@i18n/translations/nl';
 
 export default class MessageService {
   private readonly messages: Observable<Translations>;
@@ -12,6 +13,7 @@ export default class MessageService {
   private static translations: Map<Locale, Observable<Translations>> = new Map<Locale, Observable<Translations>>([
     [LocaleService.LOCALE_FR, frMessages],
     [LocaleService.LOCALE_EN, enMessages],
+    [LocaleService.LOCALE_NL, nlMessages],
   ]);
 
   constructor(localeService: LocaleService) {
