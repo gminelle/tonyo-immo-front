@@ -1,3 +1,4 @@
+import CustomButton from '@components/theme/custom-button/CustomButton';
 import useMessages from '@i18n/hooks/messagesHook';
 import { getGlobalInstance } from 'plume-ts-di';
 import { useObservable } from 'micro-observables';
@@ -30,6 +31,7 @@ export default function Header() {
         <h3>{messages.app_name}</h3>
       </div>
       <div className={scss.headerActions}>
+        <CustomButton label="Home" />
         <LocaleSelectorContainer />
       </div>
     </header>
