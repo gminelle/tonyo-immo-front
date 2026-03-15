@@ -3,6 +3,7 @@ export interface ErrorFunction {
 }
 
 export type Translations = {
+  app_name: string,
   // actions
   action: {
     back: string,

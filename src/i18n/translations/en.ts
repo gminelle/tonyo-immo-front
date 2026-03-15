@@ -4,6 +4,7 @@ import translationHotReload from '@i18n/translations/translations-hmr';
 import { Translations } from './Translations';
 
 const enMessages: Translations = {
+  app_name: 'Tonyo Immo',
   // actions
   action: {
     back: 'Back',

@@ -1,5 +1,17 @@
-#main-header {
-  padding: 0 $box-padding;
+.header {
+  width: 100%;
+  padding: $spacer-2 $spacer-4;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
+
+  &_app-name {
+    display: flex;
+    gap: $spacer-2;
+    align-items: center;
+  }
+
+  &_actions {
+    display: flex;
+    gap: $spacer-2;
+  }
 }

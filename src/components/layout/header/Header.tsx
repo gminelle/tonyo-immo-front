@@ -1,9 +1,10 @@
+import useMessages from '@i18n/hooks/messagesHook';
 import { getGlobalInstance } from 'plume-ts-di';
 import { useObservable } from 'micro-observables';
 import { Locale } from '@lib/locale-resolver/LocaleResolver';
 import LocaleSelector from '@components/theme/LocaleSelector';
 import LocaleService from '@i18n/locale/LocaleService';
-
+import HomeIcon from '@mui/icons-material/Home';
 import scss from './header.module.scss';
 
 function LocaleSelectorContainer() {
@@ -20,9 +21,17 @@ function LocaleSelectorContainer() {
 }
 
 export default function Header() {
+  const { messages } = useMessages();
+
   return (
-    <header id={scss.mainHeader}>
-      <LocaleSelectorContainer />
+    <header className={scss.header}>
+      <div className={scss.headerAppName}>
+        <HomeIcon />
+        <h3>{messages.app_name}</h3>
+      </div>
+      <div className={scss.headerActions}>
+        <LocaleSelectorContainer />
+      </div>
     </header>
   );
 }
