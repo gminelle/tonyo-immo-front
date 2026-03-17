@@ -15,7 +15,7 @@
     "plume-ts-di": "^1.2.4",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
-    "react-hook-form": "7.53.0",
+    "react-hook-form": "^7.71.2",
     "simple-http-request-builder": "^2.1.0",
     "simple-http-rest-client": "^2.3.0",
     "simple-job-scheduler": "^1.1.2",
