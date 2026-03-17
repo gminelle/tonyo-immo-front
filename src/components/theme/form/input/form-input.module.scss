@@ -1,0 +1,126 @@
+$placeholder-color: #1E1E1E4D;
+$icon-size: 16px;
+$autocomplete-listbox-max-height: 200px;
+
+form {
+  // need this for specificity
+  .form-control {
+    flex: 1;
+
+    &--no-margin {
+      margin: 0;
+    }
+
+    :global(.MuiInputBase-root:not(.Mui-error)) {
+      border: 1px solid $filassistance-grey;
+      outline: none;
+
+      ::placeholder {
+        color: $placeholder-color;
+      }
+
+      fieldset {
+        display: none;
+      }
+
+      &:hover {
+        border-color: $filassistance-green;
+      }
+
+      &:global(.Mui-focused) {
+        border-color: $filassistance-green;
+      }
+    }
+
+    &--fit-content {
+      width: fit-content;
+    }
+  }
+
+  .picker {
+    :global(.MuiPickersInputBase-root) {
+      &:hover {
+        fieldset {
+          border-color: $filassistance-green;
+        }
+      }
+
+      span {
+        color: $filassistance-dark-grey;
+
+        :global(.MuiPickersSectionList-sectionContent):not([aria-valuenow]) {
+          color: $placeholder-color;
+        }
+
+        &:global(.MuiPickersSectionList-section:has(.MuiPickersSectionList-sectionContent:not([aria-valuenow])) .MuiPickersInputBase-sectionAfter) {
+          color: $placeholder-color;
+        }
+      }
+
+      &:global(.Mui-focused) {
+        fieldset {
+          border-color: $filassistance-green !important;
+          border-width: 1px;
+        }
+
+        span {
+          color: $filassistance-dark-grey;
+        }
+      }
+    }
+
+    :global(.MuiPickersSectionList-root) {
+      padding: 8.5px 0;
+    }
+
+    :global(.MuiPickersOutlinedInput-notchedOutline) {
+      border-color: $filassistance-grey;
+
+      &:global(.Mui-focused:not(.Mui-error)) {
+        border-color: $filassistance-green !important;
+      }
+
+    }
+  }
+
+  .icon {
+    color: $filassistance-dark-grey;
+    width: $icon-size;
+    height: $icon-size;
+  }
+
+  .input-text-error {
+    :global(.MuiFormHelperText-contained) {
+      margin-left: 0;
+    }
+  }
+
+  .autocomplete-input-scrolling-area {
+    max-height: $autocomplete-listbox-max-height;
+    overflow: auto;
+  }
+
+  .radio {
+    display: flex;
+    align-items: center;
+    font-family: $base-font-family;
+
+    :global(.MuiRadio-radio.Mui-checked) {
+      background-color: $filassistance-green;
+    }
+
+    :global(.MuiRadio-radio) {
+      border-color: $filassistance-green !important;
+    }
+  }
+
+  .checkbox {
+    width: fit-content;
+
+    :global(.MuiSvgIcon-root) {
+      fill: $filassistance-green;
+    }
+  }
+
+  @include mui-input-error-text();
+}
