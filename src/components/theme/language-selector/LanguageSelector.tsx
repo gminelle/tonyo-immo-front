@@ -48,7 +48,7 @@ export default function LanguageSelector(
       )}
       items={items}
       align={align}
-      triggerClassName={scss.languageSelectorButton}
+      triggerClassName={scss.languageSelector}
       menuLabel="Language selector"
     />
   );

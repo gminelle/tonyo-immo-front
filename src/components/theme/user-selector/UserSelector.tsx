@@ -59,7 +59,7 @@ export default function UserSelector(
       triggerContent={triggerContent}
       items={items}
       align={align}
-      triggerClassName={scss.userSelectorButton}
+      triggerClassName={scss.userSelector}
       menuLabel={`${name} menu`}
     />
   );

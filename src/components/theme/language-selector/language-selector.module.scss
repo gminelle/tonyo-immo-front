@@ -1,46 +1,52 @@
-.language-selector-button {
-  border-radius: 999px;
+$language-selector-border-radius: 999px;
+$language-selector-focus-outline-width: 2px;
+$language-selector-border-width: 1px;
+$language-selector-surface-color: #ffffff;
+$language-selector-line-height: 1;
+
+.language-selector {
+  display: inline-flex;
 
   &:focus-visible {
-    outline: 2px solid $primary-color;
-    outline-offset: 3px;
+    outline: $language-selector-focus-outline-width solid $primary-color;
+    outline-offset: $spacer-1;
   }
-}
 
-.language-selector-trigger {
-  display: inline-flex;
-  align-items: center;
-  gap: $spacer-2;
-  border: 1px solid $separator-color;
-  border-radius: 999px;
-  background: #ffffff;
-  color: $text-color;
-  padding: 0.5rem 0.9rem;
-}
+  &__trigger {
+    display: inline-flex;
+    align-items: center;
+    gap: $spacer-2;
+    border: $language-selector-border-width solid $separator-color;
+    border-radius: $language-selector-border-radius;
+    background: $language-selector-surface-color;
+    color: $text-color;
+    padding: $spacer-2 $spacer-3;
+  }
 
-.language-selector-label {
-  font-size: 0.95rem;
-  font-weight: 600;
-  line-height: 1;
-}
+  &__label {
+    font-size: $font-size-normal;
+    font-weight: 600;
+    line-height: $language-selector-line-height;
+  }
 
-.language-selector-chevron {
-  color: $text-muted-color;
-  font-size: 0.8rem;
-  line-height: 1;
-}
+  &__chevron {
+    color: $text-muted-color;
+    font-size: $font-size-small;
+    line-height: $language-selector-line-height;
+  }
 
-.language-selector-item {
-  display: flex;
-  width: 100%;
-  align-items: center;
-  justify-content: space-between;
-  gap: $spacer-2;
-}
+  &__item {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    gap: $spacer-2;
+  }
 
-.language-selector-current {
-  color: $primary-color;
-  font-size: $font-size-small;
-  font-weight: 700;
-  text-transform: uppercase;
+  &__current {
+    color: $primary-color;
+    font-size: $font-size-small;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
 }

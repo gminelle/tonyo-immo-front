@@ -1,53 +1,70 @@
-.header {
+$app-header-logo-secondary-color: #2f87d6;
+$app-header-logo-size: $spacer-4 * 3;
+$app-header-eyebrow-letter-spacing: 0.08em;
+$app-header-title-line-height: 1.1;
+$app-header-border-width: 1px;
+$app-header-surface-color: #ffffff;
+$app-header-logo-shadow: 0 $spacer-3 $spacer-4 * 1.5 rgb(20 105 179 / 20%);
+$app-header-breakpoint-mobile: 768px;
+
+.app-header {
   width: 100%;
   padding: $spacer-3 $spacer-4;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: $spacer-3;
-  background: linear-gradient(180deg, #ffffff 0%, #f6f7fb 100%);
-  border-bottom: 1px solid $separator-color;
+  background: linear-gradient(
+    180deg,
+    $app-header-surface-color 0%,
+    $background-color 100%
+  );
+  border-bottom: $app-header-border-width solid $separator-color;
 
-  &_brand {
+  &__brand {
     display: flex;
     gap: $spacer-3;
     align-items: center;
   }
 
-  &_logo {
+  &__logo {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 3rem;
-    height: 3rem;
-    border-radius: 1rem;
-    background: linear-gradient(135deg, $primary-color 0%, #2f87d6 100%);
-    color: #ffffff;
-    box-shadow: 0 10px 24px rgb(20 105 179 / 20%);
+    width: $app-header-logo-size;
+    height: $app-header-logo-size;
+    border-radius: $spacer-4;
+    background: linear-gradient(
+      135deg,
+      $primary-color 0%,
+      $app-header-logo-secondary-color 100%
+    );
+    color: $app-header-surface-color;
+    box-shadow: $app-header-logo-shadow;
   }
 
-  &_brand-text {
+  &__brand-text {
     display: flex;
     flex-direction: column;
   }
 
-  &_eyebrow {
+  &__eyebrow {
     color: $secondary-color;
     font-size: $font-size-small;
     font-weight: 700;
-    letter-spacing: 0.08em;
+    letter-spacing: $app-header-eyebrow-letter-spacing;
     text-transform: uppercase;
   }
 
-  &_title {
+  &__title {
     margin: 0;
     color: $text-color;
-    font-size: 1.35rem;
+    font-size: $font-size-large;
     font-weight: 700;
-    line-height: 1.1;
+    line-height: $app-header-title-line-height;
   }
 
-  &_actions {
+  &__actions {
     display: flex;
     gap: $spacer-2;
     align-items: center;
@@ -56,12 +73,12 @@
   }
 }
 
-@media (max-width: 768px) {
-  .header {
+@media (max-width: $app-header-breakpoint-mobile) {
+  .app-header {
     flex-direction: column;
     align-items: stretch;
 
-    &_actions {
+    &__actions {
       justify-content: flex-start;
     }
   }

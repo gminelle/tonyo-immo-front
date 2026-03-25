@@ -26,17 +26,17 @@ export default function Header() {
   const { messages } = useMessages();
 
   return (
-    <header className={scss.header}>
-      <div className={scss.headerBrand}>
-        <div className={scss.headerLogo} aria-hidden="true">
+    <header className={scss.appHeader}>
+      <div className={scss.appHeaderBrand}>
+        <div className={scss.appHeaderLogo} aria-hidden="true">
           <HomeWorkOutlinedIcon />
         </div>
-        <div className={scss.headerBrandText}>
-          <span className={scss.headerEyebrow}>Immobilier</span>
-          <h1 className={scss.headerTitle}>{messages.app_name}</h1>
+        <div className={scss.appHeaderBrandText}>
+          <span className={scss.appHeaderEyebrow}>Immobilier</span>
+          <h1 className={scss.appHeaderTitle}>{messages.app_name}</h1>
         </div>
       </div>
-      <div className={scss.headerActions}>
+      <div className={scss.appHeaderActions}>
         <CustomButton
           label={messages.action.authenticate}
           variant={ButtonVariant.SECONDARY}
