@@ -13,9 +13,14 @@ export type Translations = {
     search: string,
     add: string,
     authenticate: string,
+    create_account: string,
     disconnect: string,
     keep_editing: string,
     close_without_saving: string,
+  },
+  account: {
+    profile: string,
+    settings: string,
   },
   // common labels
   label: {

@@ -14,9 +14,14 @@ const enMessages: Translations = {
     search: 'Search',
     add: 'Add',
     authenticate: 'Log in',
+    create_account: 'Create account',
     disconnect: 'Log out',
     keep_editing: 'Keep editing',
     close_without_saving: 'Close without saving',
+  },
+  account: {
+    profile: 'My profile',
+    settings: 'Settings',
   },
   // common labels
   label: {

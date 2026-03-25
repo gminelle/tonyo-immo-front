@@ -12,7 +12,7 @@ form {
     }
 
     :global(.MuiInputBase-root:not(.Mui-error)) {
-      border: 1px solid $filassistance-grey;
+      border: 1px solid $form-input-border-color;
       outline: none;
 
       ::placeholder {
@@ -24,11 +24,11 @@ form {
       }
 
       &:hover {
-        border-color: $filassistance-green;
+        border-color: $form-input-active-color;
       }
 
       &:global(.Mui-focused) {
-        border-color: $filassistance-green;
+        border-color: $form-input-active-color;
       }
     }
 
@@ -41,12 +41,12 @@ form {
     :global(.MuiPickersInputBase-root) {
       &:hover {
         fieldset {
-          border-color: $filassistance-green;
+          border-color: $form-input-active-color;
         }
       }
 
       span {
-        color: $filassistance-dark-grey;
+        color: $form-input-icon-color;
 
         :global(.MuiPickersSectionList-sectionContent):not([aria-valuenow]) {
           color: $placeholder-color;
@@ -59,12 +59,12 @@ form {
 
       &:global(.Mui-focused) {
         fieldset {
-          border-color: $filassistance-green !important;
+          border-color: $form-input-active-color !important;
           border-width: 1px;
         }
 
         span {
-          color: $filassistance-dark-grey;
+          color: $form-input-icon-color;
         }
       }
     }
@@ -74,17 +74,17 @@ form {
     }
 
     :global(.MuiPickersOutlinedInput-notchedOutline) {
-      border-color: $filassistance-grey;
+      border-color: $form-input-border-color;
 
       &:global(.Mui-focused:not(.Mui-error)) {
-        border-color: $filassistance-green !important;
+        border-color: $form-input-active-color !important;
       }
 
     }
   }
 
   .icon {
-    color: $filassistance-dark-grey;
+    color: $form-input-icon-color;
     width: $icon-size;
     height: $icon-size;
   }
@@ -106,11 +106,11 @@ form {
     font-family: $base-font-family;
 
     :global(.MuiRadio-radio.Mui-checked) {
-      background-color: $filassistance-green;
+      background-color: $form-input-active-color;
     }
 
     :global(.MuiRadio-radio) {
-      border-color: $filassistance-green !important;
+      border-color: $form-input-active-color !important;
     }
   }
 
@@ -118,7 +118,7 @@ form {
     width: fit-content;
 
     :global(.MuiSvgIcon-root) {
-      fill: $filassistance-green;
+      fill: $form-input-active-color;
     }
   }
 

@@ -1,17 +1,68 @@
 .header {
   width: 100%;
-  padding: $spacer-2 $spacer-4;
+  padding: $spacer-3 $spacer-4;
   display: flex;
+  align-items: center;
   justify-content: space-between;
+  gap: $spacer-3;
+  background: linear-gradient(180deg, #ffffff 0%, #f6f7fb 100%);
+  border-bottom: 1px solid $separator-color;
 
-  &_app-name {
+  &_brand {
     display: flex;
-    gap: $spacer-2;
+    gap: $spacer-3;
     align-items: center;
+  }
+
+  &_logo {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 1rem;
+    background: linear-gradient(135deg, $primary-color 0%, #2f87d6 100%);
+    color: #ffffff;
+    box-shadow: 0 10px 24px rgb(20 105 179 / 20%);
+  }
+
+  &_brand-text {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &_eyebrow {
+    color: $secondary-color;
+    font-size: $font-size-small;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  &_title {
+    margin: 0;
+    color: $text-color;
+    font-size: 1.35rem;
+    font-weight: 700;
+    line-height: 1.1;
   }
 
   &_actions {
     display: flex;
     gap: $spacer-2;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: stretch;
+
+    &_actions {
+      justify-content: flex-start;
+    }
   }
 }

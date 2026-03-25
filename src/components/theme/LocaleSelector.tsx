@@ -1,3 +1,4 @@
+import LanguageSelector from '@components/theme/language-selector/LanguageSelector';
 import { Locale } from '@lib/locale-resolver/LocaleResolver';
 
 type LocaleSelectorProps = {
@@ -10,21 +11,10 @@ export default function LocaleSelector(
   { availableLocales, onLocaleSelected, currentLocale }: LocaleSelectorProps,
 ) {
   return (
-    <div id="lang-menu">
-      {
-        availableLocales.map((availableLocale: Locale) => (
-          currentLocale === availableLocale
-            ? (<span key={availableLocale.code}>{availableLocale.name}</span>)
-            : (
-              <button
-                type="button"
-                key={availableLocale.code}
-                onClick={() => onLocaleSelected(availableLocale)}
-              >
-                {availableLocale.name}
-              </button>
-            )))
-      }
-    </div>
+    <LanguageSelector
+      availableLocales={availableLocales}
+      currentLocale={currentLocale}
+      onLocaleSelected={onLocaleSelected}
+    />
   );
 }

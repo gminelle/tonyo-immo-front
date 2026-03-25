@@ -3,7 +3,7 @@ import { Button, ButtonProps } from '@mui/material';
 import { ReactNode } from 'react';
 import scss from './custom-button.module.scss';
 
-enum ButtonVariant {
+export enum ButtonVariant {
   PRIMARY = 'primary',
   SECONDARY = 'secondary',
   INVISIBLE = 'invisible',

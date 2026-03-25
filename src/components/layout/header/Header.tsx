@@ -1,11 +1,12 @@
-import CustomButton from '@components/theme/custom-button/CustomButton';
+import CustomButton, { ButtonVariant } from '@components/theme/custom-button/CustomButton';
 import useMessages from '@i18n/hooks/messagesHook';
 import { getGlobalInstance } from 'plume-ts-di';
 import { useObservable } from 'micro-observables';
 import { Locale } from '@lib/locale-resolver/LocaleResolver';
 import LocaleSelector from '@components/theme/LocaleSelector';
 import LocaleService from '@i18n/locale/LocaleService';
-import HomeIcon from '@mui/icons-material/Home';
+import UserSelector from '@components/theme/user-selector/UserSelector';
+import HomeWorkOutlinedIcon from '@mui/icons-material/HomeWorkOutlined';
 import scss from './header.module.scss';
 
 function LocaleSelectorContainer() {
@@ -26,13 +27,32 @@ export default function Header() {
 
   return (
     <header className={scss.header}>
-      <div className={scss.headerAppName}>
-        <HomeIcon />
-        <h3>{messages.app_name}</h3>
+      <div className={scss.headerBrand}>
+        <div className={scss.headerLogo} aria-hidden="true">
+          <HomeWorkOutlinedIcon />
+        </div>
+        <div className={scss.headerBrandText}>
+          <span className={scss.headerEyebrow}>Immobilier</span>
+          <h1 className={scss.headerTitle}>{messages.app_name}</h1>
+        </div>
       </div>
       <div className={scss.headerActions}>
-        <CustomButton label="Home" />
+        <CustomButton
+          label={messages.action.authenticate}
+          variant={ButtonVariant.SECONDARY}
+        />
+        <CustomButton
+          label={messages.action.create_account}
+        />
         <LocaleSelectorContainer />
+        <UserSelector
+          name="Camille Bernard"
+          items={[
+            { id: 'profile', label: messages.account.profile, onSelect: () => undefined },
+            { id: 'settings', label: messages.account.settings, onSelect: () => undefined },
+            { id: 'logout', label: messages.action.disconnect, onSelect: () => undefined },
+          ]}
+        />
       </div>
     </header>
   );

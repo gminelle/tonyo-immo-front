@@ -14,12 +14,6 @@ const meta: Meta<typeof LocaleSelector> = {
   // This component will have an automatically generated Autodocs entry:
   // https://storybook.js.org/docs/react/writing-docs/autodocs
   tags: ['autodocs'],
-  // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
-  argTypes: {
-    availableLocales: { control: 'array' },
-    onLocaleSelected: { action: 'onLocaleSelected' },
-    currentLocale: { control: 'text' },
-  },
 } satisfies Meta<typeof LocaleSelector>;
 
 export default meta;

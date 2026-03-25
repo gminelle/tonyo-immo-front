@@ -14,9 +14,14 @@ const frMessages: Translations = {
     search: 'Rechercher',
     add: 'Ajouter',
     authenticate: 'Me connecter',
+    create_account: 'Creer un compte',
     disconnect: 'Me déconnecter',
     keep_editing: 'Rester sur la page',
     close_without_saving: 'Fermer sans sauvegarder',
+  },
+  account: {
+    profile: 'Mon profil',
+    settings: 'Parametres',
   },
   // common labels
   label: {

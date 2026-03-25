@@ -1,0 +1,46 @@
+.language-selector-button {
+  border-radius: 999px;
+
+  &:focus-visible {
+    outline: 2px solid $primary-color;
+    outline-offset: 3px;
+  }
+}
+
+.language-selector-trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: $spacer-2;
+  border: 1px solid $separator-color;
+  border-radius: 999px;
+  background: #ffffff;
+  color: $text-color;
+  padding: 0.5rem 0.9rem;
+}
+
+.language-selector-label {
+  font-size: 0.95rem;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.language-selector-chevron {
+  color: $text-muted-color;
+  font-size: 0.8rem;
+  line-height: 1;
+}
+
+.language-selector-item {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  gap: $spacer-2;
+}
+
+.language-selector-current {
+  color: $primary-color;
+  font-size: $font-size-small;
+  font-weight: 700;
+  text-transform: uppercase;
+}
