@@ -1,0 +1,52 @@
+.user-selector-button {
+  border-radius: 999px;
+
+  &:focus-visible {
+    outline: 2px solid #4b7bf5;
+    outline-offset: 3px;
+  }
+}
+
+.user-selector-trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  border: 1px solid #d9dde5;
+  border-radius: 999px;
+  background: linear-gradient(180deg, #fff 0%, #f5f7fb 100%);
+  color: #172033;
+  padding: 0.35rem 0.5rem 0.35rem 0.35rem;
+}
+
+.user-selector-avatar,
+.user-selector-fallback-avatar {
+  display: inline-flex;
+  height: 2.25rem;
+  width: 2.25rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.user-selector-avatar {
+  object-fit: cover;
+}
+
+.user-selector-fallback-avatar {
+  background: #dbe6ff;
+  color: #23408e;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.user-selector-name {
+  font-size: 0.95rem;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.user-selector-chevron {
+  color: #667085;
+  font-size: 0.85rem;
+}
