@@ -1,6 +1,4 @@
-$user-selector-border-radius: 999px;
 $user-selector-avatar-size: $spacer-4 * 2 + $spacer-1;
-$user-selector-padding-block: $spacer-1;
 $user-selector-padding-inline: $spacer-2;
 $user-selector-padding-inline-start: $spacer-1;
 $user-selector-focus-outline-width: 2px;
@@ -8,6 +6,7 @@ $user-selector-border-width: 1px;
 $user-selector-surface-color: #ffffff;
 $user-selector-avatar-font-size: $font-size-small;
 $user-selector-name-line-height: 1.2;
+$user-selector-height: $control-height;
 
 .user-selector {
   display: inline-flex;
@@ -22,17 +21,18 @@ $user-selector-name-line-height: 1.2;
     align-items: center;
     gap: $spacer-3;
     border: $user-selector-border-width solid $separator-color;
-    border-radius: $user-selector-border-radius;
+    border-radius: $control-border-radius;
     background: linear-gradient(
       180deg,
       $user-selector-surface-color 0%,
       $background-color 100%
     );
     color: $text-color;
+    min-height: $user-selector-height;
     padding:
-      $user-selector-padding-block
+      0
       $user-selector-padding-inline
-      $user-selector-padding-block
+      0
       $user-selector-padding-inline-start;
   }
 
@@ -43,7 +43,7 @@ $user-selector-name-line-height: 1.2;
     width: $user-selector-avatar-size;
     align-items: center;
     justify-content: center;
-    border-radius: $user-selector-border-radius;
+    border-radius: 50%;
     flex-shrink: 0;
   }
 
@@ -67,5 +67,6 @@ $user-selector-name-line-height: 1.2;
   &__chevron {
     color: $text-muted-color;
     font-size: $font-size-small;
+    flex-shrink: 0;
   }
 }

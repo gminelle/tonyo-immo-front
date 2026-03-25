@@ -17,6 +17,7 @@ This file stores persistent project-specific implementation and formatting direc
 - Do not create a shared variables file dedicated to one or a few components; use the existing generic variables layer for shared tokens.
 - Component-specific SCSS variables must be declared at the top of the component stylesheet.
 - Prefer existing spacing variables over declaring new `px` or `rem` values; direct `px` or `rem` declarations are reserved for genuinely specific cases such as mobile breakpoints or element-specific max sizes.
+- Buttons, selectors, and dropdown triggers must use harmonized heights and border radii unless a documented exception is required.
 
 ### Process
 - When the user gives a new rule about code format, architecture, naming, styling, or file organization, add it to this file in the same task.
@@ -30,4 +31,5 @@ This file stores persistent project-specific implementation and formatting direc
 - 2026-03-25: Use generic shared SCSS variables instead of a component-dedicated variables file.
 - 2026-03-25: Declare component-specific SCSS variables at the top of the component stylesheet.
 - 2026-03-25: Prefer spacing tokens over new `px` or `rem` declarations except for truly specific cases.
+- 2026-03-25: Harmonize heights and border radii across buttons, selectors, and dropdown triggers.
 - 2026-03-25: Record every new user formatting rule in this file as part of the same task.

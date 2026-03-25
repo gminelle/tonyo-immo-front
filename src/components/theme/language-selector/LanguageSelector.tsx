@@ -1,6 +1,7 @@
 import DropdownMenu, { DropdownMenuItem } from '@components/theme/dropdown-menu/DropdownMenu';
 import { Locale } from '@lib/locale-resolver/LocaleResolver';
 import classNames from '@lib/class-names/ClassNames';
+import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import LanguageIcon from '@mui/icons-material/Language';
 import scss from './language-selector.module.scss';
 
@@ -43,7 +44,7 @@ export default function LanguageSelector(
         <span className={classNames(scss.languageSelectorTrigger, className)}>
           <LanguageIcon fontSize="small" />
           <span className={scss.languageSelectorLabel}>{currentLocale.name}</span>
-          <span className={scss.languageSelectorChevron} aria-hidden="true">v</span>
+          <KeyboardArrowDownIcon className={scss.languageSelectorChevron} fontSize="small" />
         </span>
       )}
       items={items}

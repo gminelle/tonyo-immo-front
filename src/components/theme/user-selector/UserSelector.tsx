@@ -1,5 +1,6 @@
 import DropdownMenu, { DropdownMenuItem } from '@components/theme/dropdown-menu/DropdownMenu';
 import classNames from '@lib/class-names/ClassNames';
+import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import scss from './user-selector.module.scss';
 
 type UserSelectorProps = {
@@ -50,7 +51,7 @@ export default function UserSelector(
           )
       }
       <span className={scss.userSelectorName}>{name}</span>
-      <span className={scss.userSelectorChevron} aria-hidden="true">v</span>
+      <KeyboardArrowDownIcon className={scss.userSelectorChevron} fontSize="small" />
     </span>
   );
 

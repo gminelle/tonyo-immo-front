@@ -1,3 +1,6 @@
+$custom-button-height: $control-height;
+
 .custom-button {
-  border-radius: $border-radius-8;
+  min-height: $custom-button-height;
+  border-radius: $control-border-radius;
 }

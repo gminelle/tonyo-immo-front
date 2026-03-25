@@ -1,8 +1,8 @@
-$language-selector-border-radius: 999px;
 $language-selector-focus-outline-width: 2px;
 $language-selector-border-width: 1px;
 $language-selector-surface-color: #ffffff;
 $language-selector-line-height: 1;
+$language-selector-height: $control-height;
 
 .language-selector {
   display: inline-flex;
@@ -17,10 +17,11 @@ $language-selector-line-height: 1;
     align-items: center;
     gap: $spacer-2;
     border: $language-selector-border-width solid $separator-color;
-    border-radius: $language-selector-border-radius;
+    border-radius: $control-border-radius;
     background: $language-selector-surface-color;
     color: $text-color;
-    padding: $spacer-2 $spacer-3;
+    min-height: $language-selector-height;
+    padding: 0 $spacer-3;
   }
 
   &__label {
@@ -33,6 +34,7 @@ $language-selector-line-height: 1;
     color: $text-muted-color;
     font-size: $font-size-small;
     line-height: $language-selector-line-height;
+    flex-shrink: 0;
   }
 
   &__item {
