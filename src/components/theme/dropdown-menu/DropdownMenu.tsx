@@ -23,7 +23,7 @@ type DropdownMenuProps = {
   className?: string,
   menuClassName?: string,
   triggerClassName?: string,
-  menuLabel?: string,
+  menuLabel: string,
 };
 
 export default function DropdownMenu(
@@ -34,7 +34,7 @@ export default function DropdownMenu(
     className,
     menuClassName,
     triggerClassName,
-    menuLabel = 'Dropdown menu',
+    menuLabel,
   }: DropdownMenuProps,
 ) {
   const [isOpen, setIsOpen] = useState(false);

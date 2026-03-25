@@ -32,7 +32,7 @@ export default function Header() {
           <HomeWorkOutlinedIcon />
         </div>
         <div className={scss.appHeaderBrandText}>
-          <span className={scss.appHeaderEyebrow}>Immobilier</span>
+          <span className={scss.appHeaderEyebrow}>{messages.header.real_estate}</span>
           <h1 className={scss.appHeaderTitle}>{messages.app_name}</h1>
         </div>
       </div>

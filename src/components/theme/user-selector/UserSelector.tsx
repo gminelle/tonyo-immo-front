@@ -1,6 +1,7 @@
 import DropdownMenu, { DropdownMenuItem } from '@components/theme/dropdown-menu/DropdownMenu';
 import classNames from '@lib/class-names/ClassNames';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
+import useMessages from '@i18n/hooks/messagesHook';
 import scss from './user-selector.module.scss';
 
 type UserSelectorProps = {
@@ -33,6 +34,7 @@ export default function UserSelector(
     align = 'end',
   }: UserSelectorProps,
 ) {
+  const { messages } = useMessages();
   const triggerContent = (
     <span className={classNames(scss.userSelectorTrigger, className)}>
       {
@@ -61,7 +63,7 @@ export default function UserSelector(
       items={items}
       align={align}
       triggerClassName={scss.userSelector}
-      menuLabel={`${name} menu`}
+      menuLabel={messages.account.menu}
     />
   );
 }

@@ -20,6 +20,7 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
   args: {
     triggerContent: 'Ouvrir le menu',
+    menuLabel: 'Menu de demonstration',
     items: [
       { id: 'profile', label: 'Mon profil', onSelect: () => undefined },
       { id: 'settings', label: 'Parametres', onSelect: () => undefined },

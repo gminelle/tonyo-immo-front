@@ -20,8 +20,16 @@ const nlMessages: Translations = {
     close_without_saving: 'Fermer sans sauvegarder',
   },
   account: {
+    menu: 'Accountmenu',
     profile: 'Mon profil',
     settings: 'Parametres',
+  },
+  header: {
+    real_estate: 'Immobilier',
+  },
+  language: {
+    current: 'Actuelle',
+    menu: 'Selecteur de langue',
   },
   // common labels
   label: {

@@ -19,8 +19,16 @@ export type Translations = {
     close_without_saving: string,
   },
   account: {
+    menu: string,
     profile: string,
     settings: string,
+  },
+  header: {
+    real_estate: string,
+  },
+  language: {
+    current: string,
+    menu: string,
   },
   // common labels
   label: {

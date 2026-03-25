@@ -20,8 +20,16 @@ const enMessages: Translations = {
     close_without_saving: 'Close without saving',
   },
   account: {
+    menu: 'Account menu',
     profile: 'My profile',
     settings: 'Settings',
+  },
+  header: {
+    real_estate: 'Real estate',
+  },
+  language: {
+    current: 'Current',
+    menu: 'Language selector',
   },
   // common labels
   label: {

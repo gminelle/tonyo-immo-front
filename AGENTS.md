@@ -18,11 +18,13 @@ This file stores persistent project-specific implementation and formatting direc
 - Component-specific SCSS variables must be declared at the top of the component stylesheet.
 - Prefer existing spacing variables over declaring new `px` or `rem` values; direct `px` or `rem` declarations are reserved for genuinely specific cases such as mobile breakpoints or element-specific max sizes.
 - Buttons, selectors, and dropdown triggers must use harmonized heights and border radii unless a documented exception is required.
+- All user-facing texts, labels, placeholders, helper texts, aria labels, and menu labels in the application must come from the translation system. No hardcoded UI copy is allowed.
 
 ### Process
 - When the user gives a new rule about code format, architecture, naming, styling, or file organization, add it to this file in the same task.
 - Before creating or editing SCSS, check whether an existing shared token already covers the needed value.
 - If no token exists, create a named token first, then use it in the component stylesheet.
+- All produced code must be typed appropriately and must respect the project's lint rules.
 
 ## Current Recorded Rules
 - 2026-03-25: Enforce strict BEM naming in SCSS.
@@ -32,4 +34,6 @@ This file stores persistent project-specific implementation and formatting direc
 - 2026-03-25: Declare component-specific SCSS variables at the top of the component stylesheet.
 - 2026-03-25: Prefer spacing tokens over new `px` or `rem` declarations except for truly specific cases.
 - 2026-03-25: Harmonize heights and border radii across buttons, selectors, and dropdown triggers.
+- 2026-03-25: Use translations for every user-facing text, label, placeholder, helper text, and aria/menu label.
+- 2026-03-25: Ensure all produced code is properly typed and respects the project's lint rules.
 - 2026-03-25: Record every new user formatting rule in this file as part of the same task.

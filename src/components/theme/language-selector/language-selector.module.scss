@@ -3,6 +3,7 @@ $language-selector-border-width: 1px;
 $language-selector-surface-color: #ffffff;
 $language-selector-line-height: 1;
 $language-selector-height: $control-height;
+$language-selector-current-surface-color: rgb(20 105 179 / 10%);
 
 .language-selector {
   display: inline-flex;
@@ -30,6 +31,13 @@ $language-selector-height: $control-height;
     line-height: $language-selector-line-height;
   }
 
+  &__flag {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    line-height: $language-selector-line-height;
+  }
+
   &__chevron {
     color: $text-muted-color;
     font-size: $font-size-small;
@@ -43,6 +51,12 @@ $language-selector-height: $control-height;
     align-items: center;
     justify-content: space-between;
     gap: $spacer-2;
+
+    &--current {
+      border-radius: $control-border-radius;
+      background: $language-selector-current-surface-color;
+      padding: $spacer-1 $spacer-2;
+    }
   }
 
   &__current {
