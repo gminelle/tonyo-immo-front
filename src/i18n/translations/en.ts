@@ -31,6 +31,14 @@ const enMessages: Translations = {
     current: 'Current',
     menu: 'Language selector',
   },
+  drawer: {
+    close: 'Close panel',
+    panel: 'Side panel',
+  },
+  popin: {
+    close: 'Close dialog',
+    dialog: 'Modal dialog',
+  },
   // common labels
   label: {
     creation_date: 'Creation date',

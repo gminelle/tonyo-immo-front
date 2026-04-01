@@ -1,27 +1,33 @@
-$popin-width-default: 32rem;
-$popin-min-height: 12rem;
-$popin-header-min-height: $control-height + $spacer-3;
-$popin-transition-duration: 160ms;
-$popin-transition-timing: ease-in-out;
+$drawer-width-default: 24rem;
+$drawer-header-min-height: $control-height + $spacer-3;
+$drawer-title-font-weight: 700;
+$drawer-transition-duration: 160ms;
+$drawer-transition-timing: ease-in-out;
 
-.popin {
+.drawer {
   &__overlay {
     background: $overlay-color;
-    transition: opacity $popin-transition-duration $popin-transition-timing;
+    transition: opacity $drawer-transition-duration $drawer-transition-timing;
   }
 
-  &__container {
-    width: $popin-width-default;
-    max-width: calc(100% - $spacer-4 * 2);
-    min-height: $popin-min-height;
-    border-radius: $control-border-radius;
+  &__panel {
+    display: flex;
+    height: 100%;
+    width: $drawer-width-default;
+    max-width: 100%;
+    flex-direction: column;
     background: $surface-color;
     box-shadow: $panel-shadow;
+
+    &--left,
+    &--right {
+      border-radius: 0;
+    }
   }
 
   &__header {
     display: flex;
-    min-height: $popin-header-min-height;
+    min-height: $drawer-header-min-height;
     align-items: center;
     justify-content: space-between;
     gap: $spacer-3;
@@ -32,7 +38,7 @@ $popin-transition-timing: ease-in-out;
   &__title {
     color: $text-color;
     font-size: $font-size-large;
-    font-weight: 700;
+    font-weight: $drawer-title-font-weight;
   }
 
   &__close {
@@ -45,9 +51,10 @@ $popin-transition-timing: ease-in-out;
     border-radius: $control-border-radius;
     background: $surface-color;
     color: $text-color;
+    cursor: pointer;
     transition:
-      background-color $popin-transition-duration $popin-transition-timing,
-      border-color $popin-transition-duration $popin-transition-timing;
+      background-color $drawer-transition-duration $drawer-transition-timing,
+      border-color $drawer-transition-duration $drawer-transition-timing;
 
     &:hover,
     &:focus-visible {
@@ -58,6 +65,8 @@ $popin-transition-timing: ease-in-out;
   }
 
   &__content {
+    flex: 1;
+    overflow: auto;
     padding: $spacer-4;
   }
 }

@@ -25,6 +25,7 @@ This file stores persistent project-specific implementation and formatting direc
 - Before creating or editing SCSS, check whether an existing shared token already covers the needed value.
 - If no token exists, create a named token first, then use it in the component stylesheet.
 - All produced code must be typed appropriately and must respect the project's lint rules.
+- New or modified components must be checked against the project's lint rules, and produced component code must not introduce avoidable lint violations.
 
 ## Current Recorded Rules
 - 2026-03-25: Enforce strict BEM naming in SCSS.
@@ -37,3 +38,4 @@ This file stores persistent project-specific implementation and formatting direc
 - 2026-03-25: Use translations for every user-facing text, label, placeholder, helper text, and aria/menu label.
 - 2026-03-25: Ensure all produced code is properly typed and respects the project's lint rules.
 - 2026-03-25: Record every new user formatting rule in this file as part of the same task.
+- 2026-04-01: New or modified components must be checked against the project's lint rules and should not introduce avoidable lint violations.

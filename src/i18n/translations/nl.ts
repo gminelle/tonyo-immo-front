@@ -31,6 +31,14 @@ const nlMessages: Translations = {
     current: 'Actuelle',
     menu: 'Selecteur de langue',
   },
+  drawer: {
+    close: 'Fermer le panneau',
+    panel: 'Panneau lateral',
+  },
+  popin: {
+    close: 'Fermer la fenetre',
+    dialog: 'Fenetre modale',
+  },
   // common labels
   label: {
     creation_date: 'Date de création',

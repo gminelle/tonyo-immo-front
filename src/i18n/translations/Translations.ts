@@ -30,6 +30,14 @@ export type Translations = {
     current: string,
     menu: string,
   },
+  drawer: {
+    close: string,
+    panel: string,
+  },
+  popin: {
+    close: string,
+    dialog: string,
+  },
   // common labels
   label: {
     creation_date: string,
